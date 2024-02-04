@@ -1,0 +1,1069 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+:root {
+  --orange: rgb(83, 196, 190);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: rgb(83, 196, 190);
+  color: blue;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.heading span {
+  font-size: 3.5rem;
+  background: rgba(123, 226, 75, 0.479);
+  color: rgb(83, 196, 190);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+.heading span.space {
+  background: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(83, 196, 190);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: orangered;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  color: blue;
+}
+
+header .navbar a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 0.8rem;
+}
+
+header .navbar a:hover {
+  color: chartreuse;
+  border-bottom: 3px solid chartreuse;
+  transition: 0.2s;
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover {
+  color: chartreuse;
+}
+
+header .search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: lightgrey;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  text-transform: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+header .search-bar-container label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+  color: greenyellow;
+}
+
+.login-form-container {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container.active {
+  top: 0;
+}
+
+.login-form-container #form-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu-bar {
+  color: #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content {
+  text-align: center;
+}
+
+.home .content h3 {
+  font-size: 5.5rem;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-left: 5rem;
+  position: relative;
+  -webkit-text-stroke: 0.3vw rgba(255, 255, 255, 0.734);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.home .content h3::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: orangered;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid rgba(83, 196, 190, 0);
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+.home .content p {
+  color: #ffa700;
+  font-size: 3rem;
+  padding: 0.5rem 0;
+  margin-left: 11rem;
+}
+.red {
+  font-weight: bolder;
+  color: blue;
+}
+.blue {
+  color: orangered;
+  font-weight: bolder;
+}
+.comma {
+  color: green;
+}
+.home .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home .controls {
+  padding: 1rem;
+  border-radius: 5rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 2rem;
+  margin-left: -1.5rem;
+}
+
+.home .controls .vid-btn {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+.home-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: -2rem;
+  background: rgb(83, 196, 190);
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid rgba(244, 247, 248, 0.685);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.home-btn:hover {
+  border: 2px solid green;
+  background: white;
+  color: black;
+}
+
+.home .controls .vid-btn.active {
+  background: rgb(83, 196, 190);
+}
+
+.book .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.book .row .image {
+  flex: 1 1 40rem;
+}
+
+.book .row .image img {
+  width: 600px;
+  border-radius: 10px;
+}
+
+.book .row form {
+  flex: 1 1 40rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid burlywood;
+  width: 400px;
+  height: 500px;
+  background-color: skyblue;
+}
+
+.book .row form .inputBox {
+  padding: 0.5rem 0;
+}
+
+.book .row form .inputBox input {
+  width: 210px;
+  margin-left: 81px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid lightslategrey;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+}
+.book .row form .inputBox input:focus {
+  width: 215px;
+  border: 2px solid chartreuse;
+  color: black;
+}
+
+.book .row form .inputBox h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 13rem;
+  background: blue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid lightslategrey;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  border: 2px solid white;
+  background: greenyellow;
+  color: black;
+}
+.packages .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.packages .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(236, 236, 236, 0.829);
+  border-radius: 10px;
+}
+
+.packages .box-container .box img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content {
+  padding: 2rem;
+}
+
+.packages .box-container .box .content h3 {
+  font-size: 2rem;
+
+  color: #333;
+}
+
+.packages .box-container .box .content h3 i {
+  color: rgb(83, 196, 190);
+}
+
+.packages .box-container .box .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.packages .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: rgb(83, 196, 190);
+}
+
+.packages .box-container .box .content .price {
+  font-size: 2rem;
+  color: #333;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span {
+  color: #666;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.book-btn {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-left: 17rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.book2-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-left: 17rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.book3-btn {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-left: 17rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.book4-btn {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-left: 17rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.book5-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-left: 17rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.book6-btn {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-left: 17rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.book-btn:hover {
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+}
+.book2-btn:hover {
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+}
+.book3-btn:hover {
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+}
+.book4-btn:hover {
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+}
+.book5-btn:hover {
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+}
+.book6-btn:hover {
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
+}
+
+.services .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.services .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(236, 236, 236, 0.829);
+}
+
+.services .box-container .box i {
+  padding: 1rem;
+  font-size: 5rem;
+  color: rgb(83, 196, 190);
+}
+
+.services .box-container .box h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.services .box-container .box p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.services .box-container .box:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.gallery .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: rgba(236, 236, 236, 0.829);
+}
+
+.gallery .box-container .box {
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1rem solid #fff;
+  border-radius: 0.5rem;
+  flex: 1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.gallery .box-container .box .content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  padding-top: 5rem;
+}
+
+.gallery .box-container .box:hover .content {
+  top: 0;
+}
+
+.gallery .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: rgb(83, 196, 190);
+}
+
+.gallery .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #eee;
+  padding: 0.5rem 0;
+}
+.gallery-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  background: rgb(83, 196, 190);
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid rgba(30, 139, 172, 0.685);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.gallery-btn:hover {
+  background-color: #666;
+  color: white;
+}
+
+.review .review-slider {
+  padding-bottom: 2rem;
+}
+
+.review .box {
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: rgba(236, 236, 236, 0.829);
+}
+
+.review .box img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.review .box h3 {
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.review .box p {
+  color: #666;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.review .box .stars i {
+  color: rgb(83, 196, 190);
+  font-size: 1.7rem;
+}
+
+.founders .founders-slider {
+  padding-bottom: 2rem;
+}
+
+.founders .box {
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(219, 20, 20, 0.1);
+  border-radius: 30px;
+  background-color: rgba(14, 87, 87, 0.205);
+  font-size: 1.5rem;
+}
+
+.founders .box img {
+  border-radius: 10px;
+  height: 13rem;
+  width: 13rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.founders .box h3 {
+  color: rgb(0, 183, 255);
+  font-size: 2.5rem;
+}
+
+.founders .box p {
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.founder {
+  font-size: large;
+  color: orangered;
+  font-weight: bolder;
+}
+.founder2 {
+  font-size: large;
+  font-weight: bolder;
+  color: blue;
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.contact .row .image {
+  flex: 1 1 35rem;
+  border: 1px solid lightblue;
+  border-radius: 80px;
+}
+
+.contact .row .image img {
+  width: 100%;
+}
+
+.contact .row form {
+  flex: 1 1 50rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: skyblue;
+  border: 1px solid burlywood;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea {
+  width: 45%;
+  text-align: center;
+  border: 2px solid lightgreen;
+  border-radius: 20px;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: rgb(0, 0, 0);
+  background: lightcyan;
+  text-transform: none;
+}
+
+.contact .row form textarea {
+  text-align: left;
+  height: 15rem;
+  resize: none;
+  border: 2px solid lightgreen;
+  width: 80%;
+}
+.contact .row form textarea:focus {
+  width: 100%;
+  border: 2px solid cadetblue;
+}
+.contact .row form .inputBox :focus {
+  width: 49%;
+  border: 2px solid cadetblue;
+}
+.send-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 23rem;
+  background: blue;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2px solid rgba(244, 247, 248, 0.685);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.send-btn:hover {
+  background-color: chartreuse;
+  color: black;
+}
+.brand-container {
+  text-align: center;
+}
+
+.footer {
+  background: #333;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer .box-container .box {
+  padding: 1rem 0;
+  flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  padding: 0.7rem 0;
+  color: #fff;
+}
+
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a:hover {
+  color: rgb(83, 196, 190);
+  text-decoration: underline;
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .credit span {
+  color: rgb(83, 196, 190);
+}
+
+/* media queries  */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #333;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #222;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox input {
+    width: 100%;
+  }
+}
+.Name {
+  font-size: large;
+  font-weight: bolder;
+  color: rgb(83, 196, 190);
+}
+.Name2 {
+  font-size: large;
+  font-weight: bolder;
+  color: blue;
+}
+.Name3 {
+  font-size: large;
+  font-weight: bolder;
+  color: orangered;
+}
+
+.form-box {
+  width: 445px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-image: linear-gradient(
+      rgba(211, 229, 238, 0),
+      rgba(20, 112, 133, 0.468)
+    ),
+    url(login-img.jpg); 
+  padding: 5px;
+  overflow: hidden;
+}
+.icon-user {
+  margin-top: -50px;
+  margin-left: 170px;
+  margin-bottom: 3px;
+  color: greenyellow;
+  font-size: 13px;
+}
+.icon-user2 {
+  margin-bottom: -34.5px;
+  margin-left: -7px;
+  color: greenyellow;
+  font-size: 20px;
+}
+.username {
+  font-size: 15px;
+  margin-left: 137px;
+  color: white;
+  margin-bottom: 5px;
+}
+.icon-lock {
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 168px;
+  color: greenyellow;
+  font-size: 13px;
+}
+.icon-lock2 {
+  margin-bottom: -34.5px;
+  margin-left: -6.5px;
+  color: greenyellow;
+  font-size: 20px;
+}
+.icon-mail {
+  margin-bottom: -34.5px;
+  margin-left: -7px;
+  color: greenyellow;
+  font-size: 20px;
+}
+.pass {
+  font-size: 15px;
+  margin-left: 137px;
+  color: white;
+  margin-bottom: 5px;
+}
+.button-box {
+  width: 238px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 4px #f0edebd5;
+  border-radius: 30px;
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 128px;
+  height: 100%;
+  background: linear-gradient(to right, #f3ed39, #96ff7c);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.input-group {
+  top: 170px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin-left: 32px;
+  margin-bottom: 22px;
+  text-align: center;
+  border: 2px solid rgb(26, 194, 26);
+  border-radius: 30px;
+  background: lightcyan;
+}
+.input-field:focus {
+  width: 102%;
+  border: 2px solid darkblue;
+  border-radius: 30px;
+  background: lightcyan;
+}
+
+.submit-btn {
+  width: 150px;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-left: 94px;
+  background: linear-gradient(to right, #10ffe7, #118ac6);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.submit-btn:hover {
+  background: linear-gradient(to right, #f3ed39, #96ff7c);
+  color: blue;
+}
+
+.check-box {
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+.chech-box {
+  margin-left: 65px;
+  margin-bottom: 20px;
+}
+
+.login-page {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+
+#login {
+  left: 50px;
+}
+
+#register {
+  left: 450px;
+}
+.remember-us {
+  font-size: 13.5px;
+  color: white;
+}
+.agree-us {
+  font-size: 13.5px;
+  color: white;
+}

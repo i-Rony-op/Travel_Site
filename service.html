@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Project</title>
+    <link rel="icon" href="Logo3.png" type="image" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>T</span>RAVEL</a>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Book.html">Book</a>
+        <a href="package.html">Packages</a>
+        <a href="service.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <!-- <a href="#review">Review</a>
+        <a href="#founders">Founders</a> -->
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="#" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Search here..." />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container  -->
+
+    <div class="login-form-container">
+      <i class="fas fa-times" id="form-close"></i>
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="Login()">
+            LOGIN
+          </button>
+          <button type="button" class="toggle-btn" onclick="Register()">
+            REGISTER
+          </button>
+        </div>
+        <form id="Login" class="input-group">
+          <div class="icon-user">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="username">
+            <h3>Username</h3>
+          </div>
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Enter ID"
+            required
+          />
+          <div class="icon-lock">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="pass">
+            <h3>Password</h3>
+          </div>
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input type="checkbox" class="check-box" />
+          <span class="remember-us">Remember Me</span>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <form id="Register" class="input-group">
+          <div class="icon-user2">
+            <i class="fas fa-user"></i>
+          </div>
+          <input
+            type="text"
+            class="input-field"
+            placeholder=" Create User ID"
+            required
+          />
+          <div class="icon-mail">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input
+            type="email"
+            class="input-field"
+            placeholder=" Enter Email ID"
+            required
+          />
+          <div class="icon-lock2">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Create Password"
+            required
+          />
+          <input type="checkbox" class="chech-box" />
+          <span class="agree-us">I agree to the terms & conditions</span>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br />
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+      <h1 class="heading">
+        <span>S</span>
+        <span>E</span>
+        <span>R</span>
+        <span>V</span>
+        <span>I</span>
+        <span>C</span>
+        <span>E</span>
+        <span>S</span>
+      </h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-hotel"></i>
+          <h3>Affordable Hotels</h3>
+          <p>
+            Our site good for finding multiple accommodations at one time.<br />
+            The site also has filters for family-friendly vacations, solo
+            travelers, types of accessibility for the hotels, and different
+            types of lodging.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-utensils"></i>
+          <h3>Food & Drinks</h3>
+          <p>
+            Delicious and Attractive menus.<br />Two way communication and
+            nurture an ownership environment with emphasis in motivation and
+            teamwork. <br />Building positive relationships with food and
+            beverage vendors. <br />Adhering to the food and beverage budget.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Safety Guide</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+            commodi earum, quis voluptate exercitationem ut minima itaque iusto
+            ipsum corrupti!
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-globe-asia"></i>
+          <h3>Around The World</h3>
+          <p>
+            We have our services all over around the world. You can book your
+            tickets from any country and enjoy our services.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-plane"></i>
+          <h3>Fastest Travel</h3>
+          <p>
+            This site searches for inexpensive flights and shows hidden-city
+            ticketing trips in addition to flights on major search engines.<br />
+            Hidden-city flights require travelers to get off at the layover and
+            then catch another flight.<br />
+            But with TRAVEL you can easily tour any place you want.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-hiking"></i>
+          <h3>Adventures</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+            commodi earum, quis voluptate exercitationem ut minima itaque iusto
+            ipsum corrupti!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- footer section  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>About Us</h3>
+          <p>
+            Nurtured from the seed of a single great idea - to empower the<br />
+            traveller -<span class="Name2">TRAVEL</span> is a pioneer in worlds
+            online travel industry. Founded in the year 2022 by<br />
+            <span class="Name">WebSite Project Team</span><br /z>, "TRAVEL" came
+            to life to empower the travellers with instant bookings and
+            comprehensive choices. The company initiated its journey serving the
+            US travel market offering a range of best-value products and
+            services powered by technology and round-the-clock customer support.
+          </p>
+        </div>
+        <div class="box">
+          <h3>Branch Locations</h3>
+          <a
+            href="https://www.google.com/maps/place/India/@19.6875296,60.9996338,4z/data=!3m1!4b1!4m5!3m4!1s0x30635ff06b92b791:0xd78c4fa1854213a6!8m2!3d20.593684!4d78.96288  "
+            target="_blank"
+            >India</a
+          >
+          <a
+            href="https://www.google.com/maps/place/United+States/@31.7860603,-132.0853276,3z/data=!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
+            target="_blank"
+            >USA</a
+          >
+          <a
+            href="https://www.google.com/maps/place/Japan/@36.448344,131.4323779,6.03z/data=!4m5!3m4!1s0x34674e0fd77f192f:0xf54275d47c665244!8m2!3d36.204824!4d138.252924"
+            target="_blank"
+            >Japan</a
+          >
+          <a
+            href="https://www.google.com/maps/place/France/@45.9204565,0.8692215,6.31z/data=!4m13!1m7!3m6!1s0x46ed8886cfadda85:0x72ef99e6b3fcf079!2sEurope!3b1!8m2!3d54.5259614!4d15.2551187!3m4!1s0xd54a02933785731:0x6bfd3f96c747d9f7!8m2!3d46.6305787!4d2.4554443"
+            target="_blank"
+            >France</a
+          >
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="Book.html">Book</a>
+          <a href="package.html">Packages</a>
+          <a href="service.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <!-- <a href="#review">Review</a>
+        <a href="#founders">Founders</a> -->
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="box">
+          <h3>Follow Us On</h3>
+          <a href="https://www.facebook.com/login.php/" target="_blank"
+            >Facebook</a
+          >
+          <a href="https://www.instagram.com/accounts/login/" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://twitter.com/i/flow/login" target="_blank">Twitter</a>
+          <a href="https://www.linkedin.com/login" target="_blank">Linkedin</a>
+        </div>
+      </div>
+
+      <h1 class="credit">
+        Created By <span> Website Project Team </span> | &copy All Rights
+        Reserved!
+      </h1>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>

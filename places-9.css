@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  height: 900px;
+  width: 1000px;
+  display: grid;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Backgroud-Image16.jpg") no-repeat center center / cover;
+}
+.head {
+  margin-left: 28rem;
+  position: relative;
+  -webkit-text-stroke: 0.3vw rgba(240, 175, 164, 0.734);
+  white-space: nowrap;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 1rem;
+  font-size: 4rem;
+  color: rgb(185, 26, 137);
+  text-decoration: underline double 2px lightcyan;
+}
+.head::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: rgb(181, 36, 217);
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid rgba(83, 196, 190, 0);
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+.img {
+  height: 300px;
+  width: 300px;
+  margin-left: 2rem;
+  margin-top: -20px;
+  border: 2px solid white;
+  display: flex;
+  border-radius: 15px;
+}
+.img2 {
+  height: 300px;
+  width: 300px;
+  margin-left: 22rem;
+  margin-top: -353px;
+  border: 2px solid white;
+  display: flex;
+  border-radius: 15px;
+}
+.img3 {
+  height: 300px;
+  width: 300px;
+  margin-left: 42rem;
+  margin-top: -403px;
+  border: 2px solid white;
+  display: flex;
+  border-radius: 15px;
+}
+.img4 {
+  height: 300px;
+  width: 300px;
+  margin-left: 62rem;
+  margin-top: -454px;
+  border: 2px solid white;
+  display: flex;
+  border-radius: 15px;
+}
+.conatiner {
+  height: 224px;
+  width: 40rem;
+  border: 1px solid blue;
+  background-color: rgba(135, 206, 250, 0.253);
+  color: white;
+  margin-top: -170px;
+  margin-left: 21rem;
+  border-radius: 30px;
+  padding: 10px;
+}
+.text {
+  text-align: center;
+}
+.end {
+  font-size: 27px;
+  text-align: center;
+  color: #77f4c6;
+}
+a {
+  text-decoration: none;
+  color: rgb(227, 37, 180);
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 8px;
+  background-color: burlywood;
+}
+
+.click :hover {
+  color: rgb(246, 73, 73);
+  text-shadow: 0px 0px 2px red;
+}
+
+.click {
+  font-size: 25px;
+  margin-top: -20px;
+  text-align: center;
+}

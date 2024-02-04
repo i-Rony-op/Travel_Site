@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Project</title>
+    <link rel="icon" href="Logo3.png" type="image" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>T</span>RAVEL</a>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Book.html">Book</a>
+        <a href="package.html">Packages</a>
+        <a href="service.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#review">Review</a>
+        <a href="#founders">Founders</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="#" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Search here..." />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container  -->
+
+    <div class="login-form-container">
+      <i class="fas fa-times" id="form-close"></i>
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="Login()">
+            LOGIN
+          </button>
+          <button type="button" class="toggle-btn" onclick="Register()">
+            REGISTER
+          </button>
+        </div>
+        <form id="Login" class="input-group">
+          <div class="icon-user">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="username">
+            <h3>Username</h3>
+          </div>
+          <input type="text" class="input-field" placeholder="Enter ID" />
+          <div class="icon-lock">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="pass">
+            <h3>Password</h3>
+          </div>
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Enter Password"
+          />
+          <input type="checkbox" class="check-box" />
+          <span class="remember-us">Remember Me</span>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <form id="Register" class="input-group">
+          <div class="icon-user2">
+            <i class="fas fa-user"></i>
+          </div>
+          <input
+            type="text"
+            class="input-field"
+            placeholder=" Create User ID"
+          />
+          <div class="icon-mail">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input
+            type="email"
+            class="input-field"
+            placeholder=" Enter Email ID"
+          />
+          <div class="icon-lock2">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Create Password"
+          />
+          <input type="checkbox" class="chech-box" />
+          <span class="agree-us">I agree to the terms & conditions</span>
+          <button type="submit" class="submit-btn" id="reg-btn">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="content">
+        <h3 data-text="ADVENTURE IS WORTHWHILE">Adventure is Worthwhile</h3>
+        <p>
+          <span class="comma"></span><span class="red">T</span
+          ><span class="blue">RAVEL</span> is the healthiest addiction<span
+            class="comma"
+          ></span>
+        </p>
+        <a href="#gallery" class="home-btn">Discover More</a>
+      </div>
+
+      <div class="controls">
+        <span class="vid-btn active" data-src="Video 8.mp4"></span>
+        <span class="vid-btn" data-src="Video 1.mp4"></span>
+        <span class="vid-btn" data-src="Video 9.mp4"></span>
+        <span class="vid-btn" data-src="Video 6.mp4"></span>
+        <span class="vid-btn" data-src="Video 7.mp4"></span>
+      </div>
+
+      <div class="video-container">
+        <video src="Video 8.mp4" id="video-slider" loop autoplay muted></video>
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- book section starts  -->
+
+    <section class="book" id="book">
+      <h1 class="heading">
+        <span>B</span>
+        <span>O</span>
+        <span>O</span>
+        <span>K</span>
+        <span class="space"></span>
+        <span>N</span>
+        <span>O</span>
+        <span>W</span>
+      </h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="Book Now 2.jpg" alt="Book Now" />
+        </div>
+        <div class="book-now-container">
+          <form id="Book">
+            <div class="inputBox">
+              <h3>Where To</h3>
+              <input type="text" placeholder="Place name" />
+            </div>
+            <div class="inputBox">
+              <h3>How Many</h3>
+              <input type="number" placeholder="Number of Guests" />
+            </div>
+            <div class="inputBox">
+              <h3>Arrivals</h3>
+              <input type="date" />
+            </div>
+            <div class="inputBox">
+              <h3>Leaving</h3>
+              <input type="date" />
+            </div>
+            <input type="submit" class="btn" value="Book" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- book section ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+      <h1 class="heading">
+        <span>P</span>
+        <span>A</span>
+        <span>C</span>
+        <span>K</span>
+        <span>A</span>
+        <span>G</span>
+        <span>E</span>
+        <span>S</span>
+      </h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="Mumbai4.jpg" alt="Mumbai" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Mumbai</h3>
+            <p>
+              Mumbai lies on the Konkan coast on the west coast of India and has
+              a deep natural harbour. In 2008, Mumbai was named an alpha world
+              city. It is also the wealthiest city in India, and has the highest
+              number of millionaires and billionaires among all cities in India.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="far fa-star"></i> -->
+            </div>
+            <div class="price">₹5,653.85<span>₹9,746.04</span></div>
+            <a href="Book.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="Image2.jpg" alt="Hawaii" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Hawaii</h3>
+            <p>
+              Hawaii is the world's largest island chain, and it's the only U.S.
+              state completely made up of islands. But only 7 of its 132 islands
+              are inhabited: Hawaii (also known as the Big Island), Maui,
+              Molokai, Lanai, Oahu, Kauai, and Niihau. The Hawaiian Islands are
+              volcanic islands.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="far fa-star"></i> -->
+            </div>
+            <div class="price">₹95,648.97<span>₹1,09,075.54</span></div>
+            <a href="Book.html" class="book2-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="Image3.jpg" alt="Sydney" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Sydney</h3>
+            <p>
+              Sydney, city, capital of the state of New South Wales, Australia.
+              Located on Australia's southeastern coast, Sydney is the country's
+              largest city and, with its magnificent harbour and strategic
+              position, is one of the most important ports in the South Pacific.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="far fa-star"></i> -->
+            </div>
+            <div class="price">₹1,29,736.64 <span>₹1,46,560.31</span></div>
+            <a href="Book.html" class="book3-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="Image4.jpg" alt="Paris" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Paris</h3>
+            <p>
+              Paris is positioned at the centre of the Île-de-France region,
+              which is crossed by the Seine, Oise, and Marne rivers. The city is
+              ringed with great forests of beech and oak; they are called the
+              “lungs of Paris,” for they help to purify the air in the heavily
+              industrialized region.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="far fa-star"></i> -->
+            </div>
+            <div class="price">₹51,736.28<span>₹56,107.64</span></div>
+            <a href="Book.html" class="book4-btn">Book now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="Image5.jpg" alt="Tokyo" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Tokyo</h3>
+            <p>
+              Tokyo is the administrative, cultural, financial, commercial, and
+              educational centre of Japan and the focus of an extensive urban
+              complex that includes Kawasaki and Yokohama. Attractions include
+              the Imperial Palace, encircled by stone-walled moats and broad
+              gardens, and numerous temples and shrines.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="far fa-star"></i> -->
+            </div>
+            <div class="price">₹60,422.73<span>₹66,079.62</span></div>
+            <a href="Book.html" class="book5-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="Image6.jpg" alt="Egypt" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Egypt</h3>
+            <p>
+              Southern Egypt's landscape contains low mountains and desert.
+              Northern Egypt has wide valleys near the Nile and desert to the
+              east and west. North of Cairo, the capital, is the sprawling,
+              triangular Nile River Delta. This fertile land is completely
+              covered with farms.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="far fa-star"></i> -->
+            </div>
+            <div class="price">₹69,999.65 <span>₹75,846.09</span></div>
+            <a href="Book.html" class="book6-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- packages section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+      <h1 class="heading">
+        <span>S</span>
+        <span>E</span>
+        <span>R</span>
+        <span>V</span>
+        <span>I</span>
+        <span>C</span>
+        <span>E</span>
+        <span>S</span>
+      </h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-hotel"></i>
+          <h3>Affordable Hotels</h3>
+          <p>
+            Our site good for finding multiple accommodations at one time.<br />
+            The site also has filters for family-friendly vacations, solo
+            travelers, types of accessibility for the hotels, and different
+            types of lodging.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-utensils"></i>
+          <h3>Food & Drinks</h3>
+          <p>
+            Delicious and Attractive menus.<br />Two way communication and
+            nurture an ownership environment with emphasis in motivation and
+            teamwork. <br />Building positive relationships with food and
+            beverage vendors. <br />Adhering to the food and beverage budget.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Safety Guide</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+            commodi earum, quis voluptate exercitationem ut minima itaque iusto
+            ipsum corrupti!
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-globe-asia"></i>
+          <h3>Around The World</h3>
+          <p>
+            We have our services all over around the world. You can book your
+            tickets from any country and enjoy our services.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-plane"></i>
+          <h3>Fastest Travel</h3>
+          <p>
+            This site searches for inexpensive flights and shows hidden-city
+            ticketing trips in addition to flights on major search engines.<br />
+            Hidden-city flights require travelers to get off at the layover and
+            then catch another flight.<br />
+            But with TRAVEL you can easily tour any place you want.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-hiking"></i>
+          <h3>Adventures</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+            commodi earum, quis voluptate exercitationem ut minima itaque iusto
+            ipsum corrupti!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+      <h1 class="heading">
+        <span>G</span>
+        <span>A</span>
+        <span>L</span>
+        <span>L</span>
+        <span>E</span>
+        <span>R</span>
+        <span>Y</span>
+      </h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="742357.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Lake Image.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-2.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Sunset.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-3.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Island.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-4.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Landscape.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-5.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Lake 2.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-6.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Winter.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-7.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Sunset 2.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-8.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Mountains.jpg" alt="Image" />
+          <div class="content">
+            <h3>Amazing Places</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              tenetur.
+            </p>
+            <a href="places-9.html" class="gallery-btn">See More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+      <h1 class="heading">
+        <span>R</span>
+        <span>E</span>
+        <span>V</span>
+        <span>I</span>
+        <span>E</span>
+        <span>W</span>
+      </h1>
+
+      <div class="swiper-container review-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Bill Gates.jpg" alt="Bill Gates" />
+              <h3>Bill Gates</h3>
+              <p>
+                I stayed at the hotel which I booked through this WebSite, for
+                three nights in November 2019. What an amazing hotel. I was
+                greeted with such kindness and this continued throughout my
+                stay. I booked the king room and my room was situated on the
+                14th floor. The room was fantastic. Clean, modern, and had a
+                fantastic view over the City. The rooms were absolutely
+                beautiful. I can't complain about this hotel. The gym was great,
+                the rooftop bar was fantastic, and all of the facilities were
+                clean and modern. The restaurant located inside the hotel, was
+                delicious. I dined here for breakfast and dinner.
+              </p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Steve Jobs.avif" alt="Steve Jobs" />
+              <h3>Steve Jobs</h3>
+              <p>
+                Hands down the best Chicken Wings I have ever eaten. My partner
+                and I were finding something to eat and then we found this
+                Website which totally saved our money and gave us very good
+                experience. The wings themselves had great flavor and AMAZING
+                crunch. But really, I think the crispiness of the wings is what
+                makes the wings so good. The sauce was a balanced mix of sweet
+                and spicy, which was also great over rice.
+              </p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <!-- <i class="far fa-star"></i> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Cristiano Ronaldo.jpg" alt="Cristiano Ronaldo" />
+              <h3>Cristiano Ronaldo</h3>
+              <p>
+                The Hotel is located off the highway in a business, industrial
+                area. It is not possible to walk to any shops or restaurants.
+                One side of the hotel faces the golf course, the other side
+                faces an industrial park and other buildings; request a view
+                room. Lobby is large and open with a high ceiling and lots of
+                seating for leisure and business. The pool, when we were there
+                in June, was under construction and they were working on a
+                Saturday morning. This is a convention/business hotel and at
+                times the wait for the elevator was long and common areas could
+                be very crowded and noisy. Soundproofing was weak, doors
+                slamming, hallway noise. The executive lounge staff was friendly
+              </p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <!-- <i class="fas fa-star"></i> -->
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Elon Musk.webp" alt="Elon Musk" />
+              <h3>Elon Musk</h3>
+              <p>
+                I truly love the top notch friendly and very professional
+                customer service I've received from this Website. The customer
+                services lady was so helpful! She wouldn't give up until she had
+                found a solution to my problem. She really went above and
+                beyond, I would give her 6 stars if I could. Best customer
+                service. I really appreciate all the efforts that were put from
+                customer service department he put on solving my issue. I was
+                pleasantly surprised. Great work!
+              </p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <!-- <i class="far fa-star"></i> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- founders section starts ------>
+    <section class="founders" id="founders">
+      <h1 class="heading">
+        <span>F</span>
+        <span>O</span>
+        <span>U</span>
+        <span>N</span>
+        <span>D</span>
+        <span>E</span>
+        <span>R</span>
+        <span>S</span>
+      </h1>
+      <div class="swiper-container founders-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Raunak.jpg" alt="Raunak" />
+              <h3>Raunak</h3>
+              <p>
+                Full Name: Raunak Sharma<br />
+                E-mail :
+                <a href="mailto:raunaksharma6205@gmail.com"
+                  >raunaksharma6205@gmail.com</a
+                >
+                <br />
+                Phone No. :<b> 6205764684</b><br />
+                From : Jamshedpur, Jharkhand, India<br />
+                Studying in Symbiosis Institute of Computer Studies &
+                Research<br />
+                Course : BCA(3 Years)<br />
+                Owner of <span class="founder2">T</span
+                ><span class="founder">RAVEL</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Sanush.jpg" alt="Sanush" />
+              <h3>Sanush</h3>
+              <p>
+                Full Name : S A Sanush<br />
+                E-mail :
+                <a href="mailto:sasanush@gmail.com">sasanush@gmail.com</a><br />
+                Phone No. : <b>9074585562</b><br />
+                From : Thiruvananthapuram, Kerala, India <br />
+                Studying in Symbiosis Institute of Computer Studies &
+                Research<br />
+                Course : BCA(3 Years)<br />
+                Co-Founder of <span class="founder2">T</span
+                ><span class="founder">RAVEL</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Raman.jpg" alt="Raman" />
+              <h3>Raman</h3>
+              <p>
+                Full Name: Raman Raghuvanshi<br />
+                E-mail :
+                <a href="mailto:ramanraghu2004@gmail.com"
+                  >ramanraghu2004@gmail.com</a
+                >
+                <br />
+                Phone No. :<b> 8528693930</b><br />
+                From : Lucknow, Uttar Pradesh, India<br />
+                Studying in Symbiosis Institute of Computer Studies &
+                Research<br />
+                Course : BCA(3 Years)<br />
+                Employee at <span class="founder2">T</span
+                ><span class="founder">RAVEL</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="Riddhesh.avif" alt="Riddhesh" />
+              <h3>Riddhesh</h3>
+              <p>
+                Full Name: Riddhesh Patankar<br />
+                E-mail :
+                <a href="mailto:riddheshpatankar@gmail.com"
+                  >riddheshpatankar@gmail.com</a
+                >
+                <br />
+                Phone No. : <b>7448296352</b><br />
+                From : Gondia, Maharashtra, India<br />
+                Studying in Symbiosis Institute of Computer Studies &
+                Research<br />
+                Course : BCA(3 Years)<br />
+                Supervisor of <span class="founder2">T</span
+                ><span class="founder">RAVEL</span>
+              </p>
+            </div>
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading">
+        <span>C</span>
+        <span>O</span>
+        <span>N</span>
+        <span>T</span>
+        <span>A</span>
+        <span>C</span>
+        <span>T</span>
+        <span class="space"></span>
+        <span>U</span>
+        <span>S</span>
+      </h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="undraw_Contact_us_re_4qqt.png" alt="" />
+        </div>
+
+        <form id="Form">
+          <div class="inputBox">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="E-Mail" />
+          </div>
+          <div class="inputBox">
+            <input type="number" placeholder="Number" />
+            <input type="text" placeholder="Subject" />
+          </div>
+          <textarea
+            placeholder="Message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" class="send-btn" value="SEND" />
+        </form>
+      </div>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- brand section  -->
+    <section class="brand-container">
+      <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="Brand 1.jpg" alt="Brand Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Brand 2.jpg" alt="Brand Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Brand 3.jpg" alt="Brand Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Brand 4.jpg" alt="Brand Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Brand 5.jpg" alt="Brand Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Brand 6.jpg" alt="Brand Image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>About Us</h3>
+          <p>
+            Nurtured from the seed of a single great idea - to empower the<br />
+            traveller -<span class="Name2">T</span
+            ><span class="Name3">RAVEL</span> is a pioneer in worlds online
+            travel industry. Founded in the year 2022 by<br />
+            <span class="Name">WebSite Project Team</span><br />,
+            <span class="Name2">"T</span><span class="Name3">RAVEL"</span> came
+            to life to empower the travellers with instant bookings and
+            comprehensive choices. The company initiated its journey serving the
+            US travel market offering a range of best-value products and
+            services powered by technology and round-the-clock customer support.
+          </p>
+        </div>
+        <div class="box">
+          <h3>Branch Locations</h3>
+          <a
+            href="https://www.google.com/maps/place/India/@19.6875296,60.9996338,4z/data=!3m1!4b1!4m5!3m4!1s0x30635ff06b92b791:0xd78c4fa1854213a6!8m2!3d20.593684!4d78.96288  "
+            target="_blank"
+            >India</a
+          >
+          <a
+            href="https://www.google.com/maps/place/United+States/@31.7860603,-132.0853276,3z/data=!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
+            target="_blank"
+            >USA</a
+          >
+          <a
+            href="https://www.google.com/maps/place/Japan/@36.448344,131.4323779,6.03z/data=!4m5!3m4!1s0x34674e0fd77f192f:0xf54275d47c665244!8m2!3d36.204824!4d138.252924"
+            target="_blank"
+            >Japan</a
+          >
+          <a
+            href="https://www.google.com/maps/place/France/@45.9204565,0.8692215,6.31z/data=!4m13!1m7!3m6!1s0x46ed8886cfadda85:0x72ef99e6b3fcf079!2sEurope!3b1!8m2!3d54.5259614!4d15.2551187!3m4!1s0xd54a02933785731:0x6bfd3f96c747d9f7!8m2!3d46.6305787!4d2.4554443"
+            target="_blank"
+            >France</a
+          >
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="Book.html">Book</a>
+          <a href="package.html">Packages</a>
+          <a href="service.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="#review">Review</a>
+          <a href="#founders">Founders</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="box">
+          <h3>Follow Us On</h3>
+          <a href="https://www.facebook.com/login.php/" target="_blank"
+            >Facebook</a
+          >
+          <a href="https://www.instagram.com/accounts/login/" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://twitter.com/i/flow/login" target="_blank">Twitter</a>
+          <a href="https://www.linkedin.com/login" target="_blank">Linkedin</a>
+        </div>
+      </div>
+
+      <h1 class="credit">
+        Created By <span> Website Project Team </span> | &copy All Rights
+        Reserved
+      </h1>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- custom js file link  -->
+  </body>
+</html>
